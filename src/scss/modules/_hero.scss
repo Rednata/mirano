@@ -24,7 +24,11 @@
   &__subtitle {
     font-family: $second-family;
     font-style: italic;    
-    font-size: 40px;    
+    font-size: clamp(
+      32px,
+      calc(32px + (8 * ((100vw - 1024px) / (1440 - 1024)))),
+      40px
+    );    
     text-align: right;
     color: $dark;
   }

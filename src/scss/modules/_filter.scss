@@ -1,0 +1,50 @@
+@use '../variables' as *;
+
+.filter {
+
+  &__form {
+  }
+
+  &__fieldset {
+  }
+
+  &__label {
+    display: inline-flex;
+    min-height: 72px;
+    padding: 16px;
+    align-items: center;
+    border-radius: 300px;
+    background-color: $white;
+
+    &:before {
+      content: '';  
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin-right: 4px;
+    }
+
+    &_flowers:before {
+      background: url("/img/bouquet.png") no-repeat center/contain;        
+      
+    }
+
+    &_toys:before {
+      background: url("/img/bear.png") no-repeat center/contain;
+    }
+
+    &_cards:before {
+      background: url("/img/card.png") no-repeat center/contain;      
+    }
+  }
+
+  &__input {
+    appearance: none;        
+
+    &:checked+.filter__label {
+      background-color: $light-orange;
+      transition: background-color 0.2s;
+      
+    }
+  }
+}
