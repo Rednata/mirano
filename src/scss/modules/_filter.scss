@@ -39,12 +39,13 @@
   }
 
   &__input {
-    appearance: none;        
+    appearance: none;          
+    opacity: 0;    
 
     &:checked+.filter__label {
       background-color: $light-orange;
-      transition: background-color 0.2s;
-      
+      // transition: background-color 0.2s;      
     }
+
   }
 }
