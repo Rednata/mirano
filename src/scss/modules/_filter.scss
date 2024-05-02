@@ -2,50 +2,101 @@
 
 .filter {
 
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+
   &__form {
   }
 
-  &__fieldset {
-  }
+  &__group {
+    display: flex;
+    column-gap: 12px;
 
-  &__label {
-    display: inline-flex;
-    min-height: 72px;
-    padding: 16px;
-    align-items: center;
-    border-radius: 300px;
-    background-color: $white;
-
-    &:before {
-      content: '';  
-        display: block;
-        width: 40px;
-        height: 40px;
-        margin-right: 4px;
-    }
-
-    &_flowers:before {
-      background: url("/img/bouquet.png") no-repeat center/contain;        
-      
-    }
-
-    &_toys:before {
-      background: url("/img/bear.png") no-repeat center/contain;
-    }
-
-    &_cards:before {
-      background: url("/img/card.png") no-repeat center/contain;      
+    &_choices {
+      column-gap: 64px;
     }
   }
 
-  &__input {
+  &__radio {
     appearance: none;          
     opacity: 0;    
 
     &:checked+.filter__label {
-      background-color: $light-orange;
-      // transition: background-color 0.2s;      
+      background-color: $light-orange;    
+      color: $white; 
     }
 
+    &:focus-visible+.filter__label {
+      outline: 2px solid $orange;
+      outline-offset: 3px;;
+    } 
   }
+
+  &__label {
+    display: inline-flex;
+    min-height: 72px;    
+    align-items: center;
+    color: $dark;
+    border-radius: 300px;
+    background-color: $white;
+    background-size: 40px;
+    background-position: center left 16px;
+    background-repeat: no-repeat;
+    padding: 16px;
+    padding-left: 60px;
+    cursor: pointer;    
+
+    &_flowers {
+      background-image: url("/img/bouquet.png");              
+    }
+
+    &_toys {
+      background-image: url("/img/bear.png");
+    }
+
+    &_postcards {
+      background-image: url("/img/postcard.png");      
+    }
+
+    &:hover {
+      background-color: $orange;
+    }
+  }
+
+  &__choices {
+  }
+
+  &__select {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;    
+
+    &:after {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 8px;
+      background: url('/img/arrow.svg') no-repeat center/contain;      
+    }
+  }
+
+  &__input-price {
+  }
+
+  &__type-list {
+  }
+
+  &__type-item {
+  }
+
+  &__type-button {
+  }
+
 }
+
+

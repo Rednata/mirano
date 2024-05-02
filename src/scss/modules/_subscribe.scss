@@ -1,7 +1,8 @@
 @use '../variables' as *;
 
 .subscribe {
-  margin-bottom: 140px;
+  padding-top: 80px;
+  padding-bottom: 140px;
 
   &__title {
     font-family: $second-family;

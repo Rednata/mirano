@@ -41,12 +41,12 @@
   }
 
   &__image {
-    object-fit: contain;
+    object-fit: cover;
     
     &_left {
       width: calc(284 / 1300 * 100%);
       border-radius: 400px 400px 400px 0;
-      
+      aspect-ratio: 284/352;
     }
 
     &_center {
@@ -56,6 +56,7 @@
     &_right {
       width: calc(284 / 1300 * 100%);
       border-radius: 400px 0 400px 400px;
+      aspect-ratio: 284/352;
     }
   }
 }

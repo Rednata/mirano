@@ -52,11 +52,12 @@
             <svg class="hero__image hero__image_center"
               role="img"
               aria-label="Букет цветов в вазе, включающий нежно-розовые розы, розовые хризантемы и другие цветы пастельных тонов"
-              width="680" height="588" viewBox="0 0 680 588" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">                
+              width="680" height="588" viewBox="0 0 680 588" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              preserveAspectRatio="xMidYMid slice">                
               <clippath id="hero">
                 <path d="M680 112.187C680 137.954 653.568 161.688 609.146 180.61C653.568 211.682 680 250.658 680 292.973C680 335.869 652.836 375.335 607.304 406.613C652.836 425.66 680 449.692 680 475.813C680 537.649 527.777 587.776 340 587.776C152.223 587.776 0 537.649 0 475.813C0 449.692 27.1636 425.66 72.6961 406.613C27.1636 375.335 0 335.869 0 292.973C0 250.658 26.4319 211.682 70.854 180.61C26.4319 161.688 0 137.954 0 112.187C0 50.3515 152.223 0.223633 340 0.223633C527.777 0.223633 680 50.3515 680 112.187Z" fill="#D9D9D9"/>                
               </clippath>                
-              <image xlink:href="img/hero.jpg" width="100%" clip-path="url(#hero)"/>
+              <image xlink:href="img/hero.jpg" width="100%" height="100%" clip-path="url(#hero)" preserveAspectRatio="xMidYMid slice"/>
             </svg>                            
             <img class="hero__image hero__image_right" src="/img/hero-right.jpg" alt="Букет цветов в круглой коробке белого цвета, состоящий из ярко-розовых и белых роз, а также зеленых элементов">
           </figure>
@@ -64,28 +65,156 @@
       </section>
 
       <section class="filter">
-        <div class="container">
+        <div class="container filter__container">
           <h2 class="visually-hidden">Параметры для выбора</h2>
-          <form class="filter__form">
-            <fieldset class="filter__fieldset">
-              <input class="filter__input"  type="radio" value="flowers" name="goods" id="flowers">
-              <label class="filter__label filter__label_flowers" for="flowers">
-                Цветы
-              </label>
-              <input class="filter__input"  type="radio" value="toys" name="goods" id="toys">
-              <label class="filter__label filter__label_toys" for="toys">
-                Игрушки
-              </label>              
-              <input class="filter__input"  type="radio" value="cards" name="goods" id="cards">         
-              <label class="filter__label filter__label_cards" for="cards">
-                Открытки
-              </label>                                
-            </fieldset>
-          </form>
-        </div>
-        
-      </section>
+          <!-- <form class="filter__form"> -->
+            <fieldset class="filter__group">
+              <input class="filter__radio"  type="radio" value="flowers" name="type" id="flowers" checked>
+              <label class="filter__label filter__label_flowers" for="flowers">Цветы</label>
 
+              <input class="filter__radio"  type="radio" value="toys" name="type" id="toys">
+              <label class="filter__label filter__label_toys" for="toys">Игрушки</label>              
+
+              <input class="filter__radio"  type="radio" value="postcards" name="type" id="postcards">         
+              <label class="filter__label filter__label_postcards" for="postcards">Открытки</label>                                
+            </fieldset>
+
+            <fieldset class="filter__group filter__group_choices">
+              <div class="filter__choices choices">
+                <button class="filter__select choices__btn">Цена</button>
+                <div class="choices__box">
+                  <fieldset class="filter__group filter__group_choices">
+                    <input class="filter__input-price" type="text" placeholder="От">
+                    <input class="filter__input-price" type="text" placeholder="До">
+                  </fieldset>
+                </div>
+              </div>
+
+              <div class="filter__choices choices">
+                <button class="filter__select choices__btn">Тип товара</button>
+                <div class="choices__box">
+                  <ul class="filter__type-list">
+                    <li class="filter__type-item">
+                      <button class="filter__type-button">
+                        Монобукеты
+                      </button>
+                    </li>
+                    <li class="filter__type-item">
+                      <button class="filter__type-button">
+                        Авторские букеты
+                      </button>
+                    </li>
+                    <li class="filter__type-item">
+                      <button class="filter__type-button">
+                        Цветы в коробке
+                      </button>
+                    </li>
+                    <li class="filter__type-item">
+                      <button class="filter__type-button">
+                        Цветы в корзине
+                      </button>
+                    </li>
+                    <li class="filter__type-item">
+                      <button class="filter__type-button">
+                        Букеты из сухоцветов
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </fieldset>
+            
+          <!-- </form> -->
+        </div>
+      </section>
+        
+      <section class="goods">
+        <div class="container">
+          <h2 class="goods__title">Цветы</h2>
+          <ul class="goods__list">
+            <li class="goods__item">
+              <article class="goods__card card">                
+                <img class="card__img" src="/img/card1.jpg" alt="Авторский букет из роз, диантусов и сухоцветов">  
+                <div class="card__content">
+                  <h3 class="card__title">
+                    Авторский букет из роз, диантусов и сухоцветов
+                  </h3>                                
+                  <p class="card__date-delivery">сегодня в 14:00</p>
+                  <button class="card__btn">
+                    <span class="card__price">3000 ₽</span>
+                    <span class="card__btn-text">в корзину</span>
+                  </button>                                  
+                </div>
+              </article>              
+            </li>
+
+            <li class="goods__item">
+              <article class="goods__card card">                
+                <img class="card__img" src="/img/card1.jpg" alt="Авторский букет из роз, диантусов и сухоцветов">  
+                <div class="card__content">
+                  <h3 class="card__title">
+                    Авторский букет из роз, диантусов и сухоцветов
+                  </h3>                                
+                  <p class="card__date-delivery">сегодня в 14:00</p>
+                  <button class="card__btn">
+                    <span class="card__price">3000 ₽</span>
+                    <span class="card__btn-text">в корзину</span>
+                  </button>                                  
+                </div>
+              </article>              
+            </li>
+
+            <li class="goods__item">
+              <article class="goods__card card">                
+                <img class="card__img" src="/img/card1.jpg" alt="Авторский букет из роз, диантусов и сухоцветов">  
+                <div class="card__content">
+                  <h3 class="card__title">
+                    Авторский букет из роз, диантусов и сухоцветов
+                  </h3>                                
+                  <p class="card__date-delivery">сегодня в 14:00</p>
+                  <button class="card__btn">
+                    <span class="card__price">3000 ₽</span>
+                    <span class="card__btn-text">в корзину</span>
+                  </button>                                  
+                </div>
+              </article>              
+            </li>
+
+            <li class="goods__item">
+              <article class="goods__card card">                
+                <img class="card__img" src="/img/card1.jpg" alt="Авторский букет из роз, диантусов и сухоцветов">  
+                <div class="card__content">
+                  <h3 class="card__title">
+                    Авторский букет из роз, диантусов и сухоцветов
+                  </h3>                                
+                  <p class="card__date-delivery">сегодня в 14:00</p>
+                  <button class="card__btn">
+                    <span class="card__price">3000 ₽</span>
+                    <span class="card__btn-text">в корзину</span>
+                  </button>                                  
+                </div>
+              </article>              
+            </li>
+
+            <li class="goods__item">
+              <article class="goods__card card">                
+                <img class="card__img" src="/img/card1.jpg" alt="Авторский букет из роз, диантусов и сухоцветов">  
+                <div class="card__content">
+                  <h3 class="card__title">
+                    Авторский букет из роз, диантусов и сухоцветов
+                  </h3>                                
+                  <p class="card__date-delivery">сегодня в 14:00</p>
+                  <button class="card__btn">
+                    <span class="card__price">3000 ₽</span>
+                    <span class="card__btn-text">в корзину</span>
+                  </button>                                  
+                </div>
+              </article>              
+            </li>
+          </ul>
+        </div>
+      </section>
+      
       <section class="subscribe">
         <div class="container">
           <h2 class="subscribe__title">ПОдпишись на рассылку</h2>
