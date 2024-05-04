@@ -1,13 +1,31 @@
 @use '../variables' as *;
+@use '../media' as *;
 
 .header {
   padding: 32px 0;
+
+  @include mobile {
+    padding: 24px 0;
+  }
 
   &__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;        
-    gap: 30px;
+    gap: 32px;
+
+    @include tablet {
+      grid-template-areas: 
+        ". logo cart"
+        "search search search";
+    }
+    @include mobile {
+      grid-template-areas: 
+        "logo logo cart"
+        "search search search";
+      gap: 24px;
+    }
+    
   }  
 
   &__form {
@@ -15,6 +33,15 @@
     display: flex;
     max-width: 420px;
     height: 40px;
+
+    @include laptop {
+      max-width: 302px;
+    }
+
+    @include tablet {
+      grid-area: search;
+      max-width: 100%;
+    }
   }
 
   &__input {
@@ -47,6 +74,16 @@
 
   &__logo {
     justify-self: center;
+    width: 200px;
+
+    @include tablet {
+      grid-area: logo;    
+    }
+
+    @include mobile {        
+      justify-self: flex-start;
+      width: 140px;
+    }
   }
 
   &__cart-button {
@@ -59,6 +96,10 @@
     font-size: 14px;
     color: $orange;
     background: url('/img/bag.svg') no-repeat center/contain;       
+
+    @include tablet {
+      grid-area: cart;
+    }
   }
 }
 

@@ -82,17 +82,17 @@
             <fieldset class="filter__group filter__group_choices">
               <div class="filter__choices choices">
                 <button class="filter__select choices__btn">Цена</button>
-                <div class="choices__box">
-                  <fieldset class="filter__group filter__group_choices">
-                    <input class="filter__input-price" type="text" placeholder="От">
-                    <input class="filter__input-price" type="text" placeholder="До">
+                <div class="choices__box filter__choices-box">
+                  <fieldset class="filter__price filter__group_choices">
+                    <input class="filter__input-price" type="text" placeholder="от">
+                    <input class="filter__input-price" type="text" placeholder="до">
                   </fieldset>
                 </div>
               </div>
 
               <div class="filter__choices choices">
                 <button class="filter__select choices__btn">Тип товара</button>
-                <div class="choices__box">
+                <div class="choices__box filter__choices-box">
                   <ul class="filter__type-list">
                     <li class="filter__type-item">
                       <button class="filter__type-button">
@@ -138,12 +138,14 @@
                 <div class="card__content">
                   <h3 class="card__title">
                     Авторский букет из роз, диантусов и сухоцветов
-                  </h3>                                
-                  <p class="card__date-delivery">сегодня в 14:00</p>
-                  <button class="card__btn">
-                    <span class="card__price">3000 ₽</span>
-                    <span class="card__btn-text">в корзину</span>
-                  </button>                                  
+                  </h3>           
+                  <div class="card__footer">
+                    <p class="card__date-delivery">сегодня в 14:00</p>
+                    <button class="card__btn">
+                      <span class="card__price">3000 ₽</span>
+                      <span class="card__btn-text">в корзину</span>
+                    </button>                                  
+                  </div>                                       
                 </div>
               </article>              
             </li>
@@ -155,11 +157,13 @@
                   <h3 class="card__title">
                     Авторский букет из роз, диантусов и сухоцветов
                   </h3>                                
-                  <p class="card__date-delivery">сегодня в 14:00</p>
-                  <button class="card__btn">
-                    <span class="card__price">3000 ₽</span>
-                    <span class="card__btn-text">в корзину</span>
-                  </button>                                  
+                  <div class="card__footer">
+                    <p class="card__date-delivery">сегодня в 14:00</p>
+                    <button class="card__btn">
+                      <span class="card__price">3000 ₽</span>
+                      <span class="card__btn-text">в корзину</span>
+                    </button>                                  
+                  </div>                                
                 </div>
               </article>              
             </li>
@@ -171,11 +175,13 @@
                   <h3 class="card__title">
                     Авторский букет из роз, диантусов и сухоцветов
                   </h3>                                
-                  <p class="card__date-delivery">сегодня в 14:00</p>
-                  <button class="card__btn">
-                    <span class="card__price">3000 ₽</span>
-                    <span class="card__btn-text">в корзину</span>
-                  </button>                                  
+                  <div class="card__footer">
+                    <p class="card__date-delivery">сегодня в 14:00</p>
+                    <button class="card__btn">
+                      <span class="card__price">3000 ₽</span>
+                      <span class="card__btn-text">в корзину</span>
+                    </button>                                  
+                  </div>                             
                 </div>
               </article>              
             </li>
@@ -187,11 +193,13 @@
                   <h3 class="card__title">
                     Авторский букет из роз, диантусов и сухоцветов
                   </h3>                                
-                  <p class="card__date-delivery">сегодня в 14:00</p>
-                  <button class="card__btn">
-                    <span class="card__price">3000 ₽</span>
-                    <span class="card__btn-text">в корзину</span>
-                  </button>                                  
+                  <div class="card__footer">
+                    <p class="card__date-delivery">сегодня в 14:00</p>
+                    <button class="card__btn">
+                      <span class="card__price">3000 ₽</span>
+                      <span class="card__btn-text">в корзину</span>
+                    </button>                                  
+                  </div>                             
                 </div>
               </article>              
             </li>
@@ -203,11 +211,13 @@
                   <h3 class="card__title">
                     Авторский букет из роз, диантусов и сухоцветов
                   </h3>                                
-                  <p class="card__date-delivery">сегодня в 14:00</p>
-                  <button class="card__btn">
-                    <span class="card__price">3000 ₽</span>
-                    <span class="card__btn-text">в корзину</span>
-                  </button>                                  
+                  <div class="card__footer">
+                    <p class="card__date-delivery">сегодня в 14:00</p>
+                    <button class="card__btn">
+                      <span class="card__price">3000 ₽</span>
+                      <span class="card__btn-text">в корзину</span>
+                    </button>                                  
+                  </div>                                 
                 </div>
               </article>              
             </li>
@@ -217,7 +227,7 @@
       
       <section class="subscribe">
         <div class="container">
-          <h2 class="subscribe__title">Подпишись на рассылку</h2>
+          <h2 class="subscribe__title">Подпишись на&nbsp;рассылку</h2>
           <form action="#" class="subscribe__form">
             <input class="subscribe__input" type="email" name="email" placeholder="E-mail">
             <button class="subscribe__button">
