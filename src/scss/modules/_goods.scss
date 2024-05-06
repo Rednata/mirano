@@ -2,10 +2,16 @@
 @use '../media' as *;
 
 .goods {
-  padding: 60px 0;
+  padding: 60px 0;  
 
   @include tablet {
-    padding: 40px 0;
+    padding: 40px 0;    
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
   }
 
   &__title {
