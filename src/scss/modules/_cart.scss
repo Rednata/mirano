@@ -8,7 +8,7 @@
     border-radius: 32px;
     padding: 24px 16px;
     max-width: 310px;
-    background-color: $white;
+    background-color: $white;    
   }
 
   &__header {
@@ -72,7 +72,7 @@
   &__counter {
     grid-area: counter;
     display: flex;
-    gap: 12px;
+    gap: 6px;
     width: max-content;
   }
 
@@ -85,7 +85,6 @@
 
   &__counter-input {
     width: 29px;
-    padding: 0 2px;
     border: none;
     text-align: center;
   }

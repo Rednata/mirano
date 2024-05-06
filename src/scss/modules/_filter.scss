@@ -18,12 +18,9 @@
     display: flex;
     justify-content: space-between;
     gap: 12px;
-    flex-wrap: wrap;    
-    border: 1px solid red;
-    
+    flex-wrap: wrap;        
 
-    &_choices {
-      border: 1px solid green;
+    &_choices {      
       column-gap: 64px;
 
       @include mobile {
@@ -87,7 +84,6 @@
   }
 
   &__choices {
-    border: 1px solid blue;
     position: relative;
   }
 
@@ -107,7 +103,6 @@
   }
 
   &__price {
-    border: 1px solid orange;
     display: flex;
     gap: 8px;
   }
@@ -116,8 +111,7 @@
     position: absolute;
     top: calc(100% + 20px);
     left: 50%;
-    transform: translateX(-50%);
-    border: 1px solid red;
+    transform: translateX(-50%);    
     border-radius: 12px;
     background-color: $white;
     padding: 24px;

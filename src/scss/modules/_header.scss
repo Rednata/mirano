@@ -21,6 +21,10 @@
     animation: slideDown .3s forwards;
   }
 
+  &_slowHidden {
+    animation: slowHidden .3s forwards;
+  }
+
   @include mobile {
     padding: 24px 0;
   }
