@@ -5,8 +5,12 @@
   }
 
   &__box {
-    // display: none;
-    // max-width: 110px;
+    display: none;
+
+    &_open {
+      display: block;
+    }
+    
   }
 }
 
